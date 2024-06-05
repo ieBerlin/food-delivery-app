@@ -1,0 +1,107 @@
+Customer's status :
+
+Active
+Inactive
+Suspended
+Deleted
+
+Differents methods :
+
+activate()    
+deactivate()  
+suspend() 
+deleteAccount()
+getState() 
+setState()  
+verify()
+
+Restaurant's Status:
+
+Open
+Close
+Suspended
+Pending // The restaurant is awaiting verification before it can start accepting orders.
+Permanently Closed: // The restaurant has permanently ceased operations on the platform.
+Under Review: The restaurant is under review by the platform administrators.
+
+Methods:
+
+open()
+close() 
+suspend()
+verify()
+closePermanently()
+markBusy() 
+review() 
+
+Driver's Status :
+
+Available
+On Delivery
+Offline
+Suspended
+Pending Verification // The driver is awaiting verification before they can start accepting delivery requests.
+Banned
+Busy //The driver is currently too busy to accept new requests (could be on a break or handling personal matters).
+Under Review
+Active: General status indicating the driver is active but not necessarily available for deliveries.
+
+Methods:
+
+goOnline()  
+goOffline() 
+startDelivery()
+endDelivery()
+suspend()
+verify() 
+ban()  
+markBusy() 
+review()
+
+Common Menu Categories:
+
+Appetizers
+Entrees
+Sides
+Beverages
+Desserts
+Salads
+Soups
+Specials
+Kids' Menu
+Breakfast
+Brunch
+Vegetarian
+Gluten-Free
+Combos
+
+Methods :
+
+getItems() 
+setItem();
+getItem();
+
+Availability :
+
+Out of stock.
+limited.
+available.
+
+Methods :
+
+setAvailability(status: Availability)
+getAvailability():
+
+cuisinType:
+Italian
+Mexican
+Chinese
+Indian
+Japanese
+American
+French
+Mediterranean
+
+Method :
+ getType()
+setType(type: string) |
