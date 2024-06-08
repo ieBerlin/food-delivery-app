@@ -1,0 +1,3 @@
+source-code/server-side/node_modules
+source-code/server-side/dist
+source-code/server-side/.env
