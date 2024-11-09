@@ -1,11 +1,16 @@
-import Notification from "./Notification.js"
-import Gender from "./Gender.js"
-import User from "./User.js"
-import Image from "./Image.js"
-import Address from "./Address.js";
+import { Schema } from "mongoose";
+import Address from "./Address";
+import Gender from "./Gender";
+import Image from "./Image";
+import User from "./User";
+export enum CustomerStatus {
+  Active = "Active",
+  Inactive = "Inactive",
+  Suspended = "Suspended",
+  Deleted = "Deleted",
+}
 class Customer implements User {
   constructor(
-    public id: number,
     public created_at: Date,
     public first_name: string,
     public last_name: string,
@@ -15,15 +20,18 @@ class Customer implements User {
     public email: string,
     public gender: Gender,
     public image: Image,
-    public notifications: Notification[],
+    public notifications: String,
     public status: CustomerStatus
   ) {}
 }
+export const customerSchema: Schema<Customer> = new Schema<Customer>({
+  status: {
+    type: String,
+    required: true,
+    loyalityPoints: Number,
+    favoritesRestaurants: String,
+    ordersHistory: String,
+  },
+});
 
-enum CustomerStatus {
-  Active = "Active",
-  Inactive = "Inactive",
-  Suspended = "Suspended",
-  Deleted = "Deleted",
-}
-export default Customer ;
+export default Customer;

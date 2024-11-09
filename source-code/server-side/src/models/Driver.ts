@@ -1,10 +1,10 @@
 import Gender from './Gender.js';
-import User from './User.js'; 
+import UserSchema from './User.js'; 
 import Notification from "./Notification.js"
 import Rating from "./Rating.js"
 import Image from './Image.js';
 import Address from './Address.js';
-class Driver implements User {
+class Driver implements UserSchema {
   constructor(
     public id: number,
     public created_at: Date,
